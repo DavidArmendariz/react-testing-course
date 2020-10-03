@@ -26,4 +26,8 @@ describe('When everything is OK', () => {
   test('should select input element by placeholder text', () => {
     screen.getByPlaceholderText('Example');
   });
+
+  test('should not find the role "whatever" in our component', () => {
+    expect(screen.queryByRole('whatever')).toBeNull();
+  });
 });
