@@ -57,7 +57,7 @@ describe('When the component fetches the user successfully', () => {
     render(<App />);
     expect(screen.queryByText(/Username/)).toBeNull();
     expect(await screen.findByText(/Username/)).toBeInTheDocument();
-    expect(await screen.findByText(/name/)).toBeInTheDocument();
+    expect(await screen.findByText(`Username: ${name}`)).toBeInTheDocument();
   });
 });
 
